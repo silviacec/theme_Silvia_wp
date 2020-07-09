@@ -25,9 +25,9 @@
       <p class="custom-content">
         <?php echo get_theme_mod('fp_texts2_description'); ?>
       </p>
-      <a href="<?php echo get_theme_mod('fp_button_url'); ?>">
-        <button type="button" class="call-to-action <?php echo get_theme_mod('fp_button_style'); ?>">
-          <?php echo get_theme_mod('fp_button_text'); ?>
+      <a href="<?php echo get_theme_mod('fp_button2_url'); ?>">
+        <button type="button" class="call-to-action <?php echo get_theme_mod('fp_button2_style'); ?>">
+          <?php echo get_theme_mod('fp_button2_text'); ?>
         </button>
     </a>
 
