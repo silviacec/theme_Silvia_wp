@@ -60,8 +60,9 @@
   </section>
 
   <section class="custom-section">
-    <blockquote class="star-quote">
+    <blockquote class="star-quote <?php echo get_theme_mod('fp_quote_background') ?>">
       <p class="quote-content">
+
         <?php echo get_theme_mod('fp_quote_text'); ?>
       </p>
       <cite class="quote-footer">

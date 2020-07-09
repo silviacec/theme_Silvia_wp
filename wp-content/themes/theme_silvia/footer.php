@@ -36,7 +36,7 @@
 
   <section class="footer-infos container">
     <div class="copyright">
-      <p><?php  echo date('Y'); ?>  Tous droits réservés.</p>
+      <p><?php echo get_theme_mod('cr_text'); ?> - <?php bloginfo('name'); ?> - <?php the_time('Y'); ?></p>
     </div>
 
     <div class="social-medias">
@@ -51,7 +51,7 @@
       </nav>
     </div>
 
-    
+
   </section>
 </footer>
 <?php wp_footer(); ?>

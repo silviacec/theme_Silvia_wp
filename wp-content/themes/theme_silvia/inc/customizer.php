@@ -340,7 +340,7 @@ $wp_customize->add_control(
       'description'    => 'Adresse URL du bouton',
       'section'        => 'fp_button',
       'setting'        => 'fp_button_url',
-      'type'           => 'url'
+      'type'           => 'dropdown-pages'
     )
   );
 
@@ -548,12 +548,75 @@ $wp_customize->add_control(
   );
 
   $wp_customize->add_setting(
-    'fp_quote_background',
-    array(
-    'default'     => 'custom-quote',
-    'type'        => 'theme_mod'
-    )
-  );
+        'fp_quote_background',
+        array(
+          'default' => 'custom-quote-style-1',
+          'type' =>'theme_mod'
+        )
+      );
+
+      $wp_customize->add_control(
+        'fp_quote_background',
+        array(
+          'label'       => 'Style',
+          'description' => 'Style de la citation',
+          'section'     => 'fp_quote',
+          'type' => 'radio',
+          'choices' => array(
+            'custom-quote-style-1' => 'Style 1',
+            'custom-quote-style-2' => 'Style 2',
+            'custom-quote-style-3' => 'Style 3'
+          )
+        )
+      );
+
+// color picker ok mais ce n'est pas ici qu'il faut l'insérer
+      // $wp_customize->add_setting(
+      //   'custom_quote_background',
+      //   array(
+      //     'default' => 'custom_quote',
+      //     'type' => 'theme_mod'
+      //   )
+      // );
+      //
+      // $wp_customize->add_control(
+      //   new WP_Customize_Color_control(
+      //     $wp_customize,
+      //     'custom_quote_background',
+      //     array(
+      //       'label' => 'Couleur',
+      //       'description' => 'Couleur de fond du bloc de citation',
+      //       'section' => 'fp_quote',
+      //       'setting' => 'custom_quote_background'
+      //     )
+      //   )
+      // );
+
+$wp_customize->add_section(
+      'copyright',
+        array(
+          'title'         => 'Copyright',
+          'description'   => 'Personnalisation de la partie copyright'
+        )
+      );
+
+      $wp_customize->add_setting(
+        'cr_text',
+        array(
+          'default' => 'Tous droits réservés',
+          'type' => 'theme_mod'
+        )
+      );
+
+      $wp_customize->add_control(
+        'cr_text',
+        array(
+          'label' => 'Texte du copyright',
+          'section' => 'copyright',
+          'setting' => 'cr_text',
+          'type' => 'text'
+        )
+      );
 
 }
 
