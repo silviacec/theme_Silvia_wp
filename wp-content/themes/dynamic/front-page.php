@@ -45,4 +45,5 @@ endif;
     </blockquote>
   </section>
 </section>
+
 <?php get_footer(); ?>

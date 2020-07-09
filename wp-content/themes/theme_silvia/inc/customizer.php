@@ -592,6 +592,42 @@ $wp_customize->add_control(
       //   )
       // );
 
+// section widget latéral on/of sur front-page/////////////////////////////////////////////////////
+  $wp_customize->add_panel(
+    'options',
+    array(
+      'title'       => 'Options du site'
+    )
+  );
+
+  $wp_customize->add_section(
+    'sidebar_on_off',
+    array(
+      'title'       => 'Masquer le widget latéral',
+      'panel'       => 'options'
+    )
+  );
+
+  $wp_customize->add_setting(
+    'widget-sidebar',
+    array(
+    'default'     => false,
+    'type'        => 'theme_mod'
+    )
+  );
+
+  $wp_customize->add_control(
+    'widget-sidebar',
+    array(
+      'title'       => 'Widgets latéral',
+      'description' => 'Cochez cette case pour afficher le widget latéral droit',
+      'section'     => 'sidebar_on_off',
+      'setting'     => 'widget-sidebar',
+      'type'        => 'checkbox'
+    )
+  );
+
+// section copyright ///////////////////////////////////////////////////////////
 $wp_customize->add_section(
       'copyright',
         array(

@@ -1,4 +1,4 @@
-<aside class="sidebar" id="widgets-sidebar">
+<aside class="sidebar" <?php if(get_theme_mod('widget-sidebar')) : echo 'hidden'; endif; ?> id="widgets-sidebar">
   <div class="widget">
 
   <?php
@@ -6,6 +6,6 @@
       dynamic_sidebar('widgets-sidebar');
     endif;
    ?>
-   
+
    </div>
 </aside>
